@@ -20,10 +20,12 @@ class Mentor:
         self.surname = surname
         self.courses_attached = []
 
-class Lecturer:
-    def __init__(self, Mentor, som):
-        pass
+class Lecturer(Mentor):
+    def __init__(self, name, surname, some_val):
+        super().__init__(name, surname)
+        self.some_val = some_val
 
-class Reviewer:
-    def __init__(self, Mentor, som):
-        pass
+class Reviewer(Mentor):
+    def __init__(self, name, surname,some_val):
+        super().__init__(name, surname)
+        self.some_val = some_val
